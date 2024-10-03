@@ -20,7 +20,10 @@ module "sandbox3" {
   }
 
   custom_fields = {
-    group = "non-prod"
+    group        = "non-prod"
+    env          = "dev"
+    provect_name = "aft-poc"
+    vpc_cidr     = "10.128.0.0/16"
   }
 
   account_customizations_name = "sandbox"
