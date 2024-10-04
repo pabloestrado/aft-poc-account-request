@@ -22,7 +22,7 @@ module "sandbox3" {
   custom_fields = {
     group        = "non-prod"
     env          = "dev"
-    provect_name = "aft-poc"
+    project_name = "aft-poc"
     vpc_cidr     = "10.128.0.0/16"
   }
 
@@ -55,7 +55,7 @@ module "sandbox4" {
   custom_fields = {
     group        = "non-prod"
     env          = "dev"
-    provect_name = "aft-poc"
+    project_name = "aft-poc"
     vpc_cidr     = "10.130.0.0/16"
   }
 
