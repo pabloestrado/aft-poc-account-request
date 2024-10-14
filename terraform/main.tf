@@ -61,3 +61,35 @@ module "sandbox4" {
 
   account_customizations_name = "eks-public"
 }
+
+
+module "mgmt-public-module" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "awsacct+spare28+mgmt-public-module@automat-it.com"
+    AccountName               = "mgmt-public-module"
+    ManagedOrganizationalUnit = "Sandbox"
+    SSOUserEmail              = "awsacct+spare28+sandbox-mgmt-public-module@automat-it.com"
+    SSOUserFirstName          = "Sandbox"
+    SSOUserLastName           = "AFT"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
+  custom_fields = {
+    group        = "non-prod"
+    env          = "mgmt"
+    project_name = "aft-poc"
+    vpc_cidr     = "10.131.0.0/16"
+  }
+
+  account_customizations_name = "mgmt-public"
+}
