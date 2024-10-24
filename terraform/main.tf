@@ -2,10 +2,10 @@ module "eks-public-module" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "awsacct+spare28+sandbox-aft-test-request-4@automat-it.com"
-    AccountName               = "sandbox-aft-test-request-4"
+    AccountEmail              = "awsacct+spare28+eks-public-module@automat-it.com"
+    AccountName               = "eks-public-module"
     ManagedOrganizationalUnit = "Sandbox"
-    SSOUserEmail              = "awsacct+spare28+sandbox-aft-test-request-4@automat-it.com"
+    SSOUserEmail              = "awsacct+spare28+eks-public-module@automat-it.com"
     SSOUserFirstName          = "Sandbox"
     SSOUserLastName           = "AFT"
   }
